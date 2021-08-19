@@ -1,0 +1,289 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Roboto;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.center {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.form {
+	border: 3px solid #4865cf;
+	border-radius: 20px;
+	padding: 20px 50px;
+}
+
+.form_title {
+	font-size: 50px;
+	margin: 10px;
+	text-align: center;
+}
+
+.input {
+	width: 100%;
+	border: 1px solid #4865cf;
+	border-radius: 10px;
+	height: 60px;
+	font-size: 35px;
+	padding: 5px;
+	text-align: center;
+}
+
+.input:focus {
+	outline: none;
+}
+
+.checkbox {
+	width: 10%;
+}
+
+.subtitle {
+	color: #6d6d6d;
+}
+
+.subtitle-right {
+	width: 100%;
+	text-align: end;
+}
+
+.subtitle_group {
+	grid-column-end: -1;
+}
+
+.actions {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.actions .action:not(:last-child) {
+	margin-right: 10px;
+}
+
+.action {
+	width: 100%;
+	background-color: white;
+	border: 1px solid #4865cf;
+	border-radius: 10px;
+	height: 60px;
+	font-size: 35px;
+	padding: 5px;
+	text-align: center;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+.action:hover {
+	background-color: #f1f5ff;
+}
+
+.form_group {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	margin-bottom: 20px;
+}
+
+.form_label {
+	font-size: 50px;
+	text-align: right;
+	margin-right: 15px;
+}
+
+.chat-list {
+	margin-top: 10px;
+	list-style-type: none;
+	max-height: 150px;
+	overflow-y: auto;
+}
+
+.chat-item {
+	cursor: pointer;
+}
+
+.chat-item:hover {
+	background-color: #d5ddff;
+}
+
+.lock-none {
+	display: inline-block;
+	width: 15px;
+}
+
+.lock::before {
+	content: ' ';
+	display: inline-block;
+	background-image: url(/img/lock.png);
+	background-size: 15px;
+	width: 15px;
+	height: 15px;
+}
+
+.chat {
+	width: 100%;
+	height: 100vh;
+	padding: 25px 0 50px 0;
+	display: flex;
+	flex-direction: column;
+	font-size: 30px;
+}
+
+.chat-history {
+	margin: 0 0 20px 0;
+	position: relative;
+	width: 100%;
+	flex-grow: 1;
+	overflow-y: auto;
+
+	/* display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start; */
+}
+
+.chat-message {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+
+	/* background-color: green;
+	border-bottom-left-radius: 0.125rem;
+
+	max-width: 85%;
+	padding: 0.5rem 1rem;
+	line-height: 1rem;
+	min-height: 2rem;
+	border-radius: 1rem;
+	margin-bottom: 0.5rem;
+	word-break: break-all;
+	text-transform: capitalize; */
+}
+
+/* .chat-message.own-message {
+	align-self: flex-end;
+	background-color: red;
+	border-bottom-right-radius: 0.125rem;
+} */
+
+.chat-message:not(:last-of-type) {
+	margin-bottom: 15px;
+}
+
+.chat-info {
+	padding-right: 15px;
+	flex: 1 1 150px;
+	max-width: 150px;
+	text-align: right;
+}
+
+.chat-username {
+	word-break: break-all;
+}
+
+.chat-timestamp {
+	font-size: 15px;
+	color: gray;
+}
+
+.chat-divider {
+	position: fixed;
+	width: 150px;
+	height: calc(100vh - 150px);
+}
+
+.chat-divider:before {
+	content: '';
+	position: absolute;
+	right: 0px;
+	width: 0px;
+	height: 100%;
+	border: 1px dashed #4865cf;
+}
+
+.chat-state {
+	padding: 5px 5px 20px;
+	flex: 1 1 300px;
+	position: relative;
+	word-break: break-word;
+}
+
+.chat-content {
+	font-size: 20px;
+}
+
+.chat-rating-panel {
+}
+
+.chat-rating {
+	border: 2px solid;
+	border-radius: 25px;
+	font-size: 20px;
+	display: inline-block;
+	padding: 1px 6px 1px 0;
+	cursor: pointer;
+}
+
+.chat-rating::before {
+	content: ' ';
+	display: inline-block;
+	background-size: 15px;
+	width: 15px;
+	height: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.chat-rating:hover {
+	opacity: 1;
+}
+
+.chat-rating-empty {
+	opacity: 0.2;
+}
+
+.chat-like {
+	border-color: #0047ff;
+}
+
+.chat-like::before {
+	background-image: url(/img/like.png);
+}
+
+.chat-like:hover {
+	background: #0000ff12;
+}
+
+.chat-dislike {
+	border-color: #ff0000;
+}
+
+.chat-dislike::before {
+	background-image: url(/img/dislike.png);
+}
+
+.chat-dislike:hover {
+	background: #ff000012;
+}
+
+.chat-panel {
+	display: flex;
+	flex-direction: row;
+}
+
+@media (max-width: 480px) {
+	.chat-divider {
+		display: none;
+	}
+}
